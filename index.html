@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Http Data Logger</title>
+	<link rel="icon" href="httpdatalogger.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Http Data Logger ,That API can save any POST,GET,JSON data & requests to MySQL database.">
+	<meta name="keywords" content="http data logger,data logger,request logger,post,get,json,mysql,database,free api,api,https,free database,debug,loger,logger,free server,save json,log post,log get,log json,iot,IOT,free iot server,https request data logger">
+	<meta name="author" content="liyanboy74">
+	<style>
+	    p,a,form,i{font-family:courier;}
+	    body{font-family:verdana;background-color: #f2f2f2;}
+        input[type=text] {
+        width: 200px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=submit]{
+        width: 70px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+        a.button:link, a.button:visited {
+        background-color: #f44336;
+        color: white;
+        padding: 13px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 4px;
+        }
+        a.button:hover, a.button:active {
+        background-color: red;
+        }
+        mark{
+        color:green;
+        background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+     <h2>HTTP Data logger</h2>
+     <hr>
+     <h4>That API can save any POST,GET,JSON & ...</h4>
+     
+     <h3>Write:</h3>
+     <p>https://sub.site.com/api/<mark>save</mark>/<strong>NAME</strong>/*<strong>Time_zone_code</strong>
+     <br><i>Default <strong>Time_zone_code</strong> is 534 (GMT)</i>
+     <br><i><a href="LoSTz.php">List of Supported Timezones</a></i></p>
+     
+     <h3>Read:</h3>
+     <p>https://sub.site.com/api/<mark>read</mark>/<strong>NAME</strong>/*<strong>Max_Number_of_rows</strong>
+     <br><i>Default <strong>Max_Number_of_rows</strong> is 100</i></p>
+     
+     <p><i>*Optional</i></p>
+     
+     <h3>Example:</h3>
+     <form method="POST" action="api/save/Test/310">
+     	<input type="text" name="Data" placeholder="Data" required>
+     	<input type="submit" value="Send">
+     	<a class="button" href="api/read/Test">Read</a>
+     </form>
+     <i>Example Time zone is 310 (Asia/Tehran)</i>
+     	
+     <br>
+</body>
+</html>

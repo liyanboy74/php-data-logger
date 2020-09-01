@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-date_default_timezone_set('GMT');
+date_default_timezone_set('Asia/Tehran');
 
 include "httprequester.php";
 include "function.php";
@@ -70,7 +70,8 @@ else if($Command=="read")
         if($i>=$flen)break;
     	$rows=mysqli_fetch_assoc($result);
     	$SData=json_decode($rows['data']);
-    	$print[$rows['dateTime']]=$SData;
+    	$print[$i]['Time']=$rows['dateTime'];
+    	$print[$i]['Data']=$SData;
     }
     echo json_encode($print);
 }

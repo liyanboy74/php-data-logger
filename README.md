@@ -1,4 +1,4 @@
-# HTTP Data logger
+# PHP Data logger
 
 Logging http requests into MySQL database
 
